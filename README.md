@@ -1,97 +1,62 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# KampusApp2
 
-# Getting Started
+Project aplikasi kampus berbasis React Native.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Prasyarat
 
-## Step 1: Start Metro
+Pastikan Anda telah menginstal:
+- [Node.js](https://nodejs.org/)
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/)
+- [Android Studio](https://developer.android.com/studio) (untuk Android)
+- [Xcode](https://developer.apple.com/xcode/) (untuk iOS, hanya macOS)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Instalasi
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/username/KampusApp2.git
+   cd KampusApp2
+   ```
 
-```sh
-# Using npm
-npm start
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-# OR using Yarn
-yarn start
-```
+## Konfigurasi Firebase (PENTING)
 
-## Step 2: Build and run your app
+Project ini menggunakan Firebase. Agar aplikasi dapat berjalan, Anda harus menggunakan konfigurasi Firebase Anda sendiri.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+1. Buka [Firebase Console](https://console.firebase.google.com/).
+2. Buat project baru atau gunakan project yang sudah ada.
+
+### Untuk Android
+1. Di Firebase Console, tambahkan aplikasi Android dengan package name: `com.kampusapp2` (atau sesuaikan `applicationId` di `android/app/build.gradle` jika Anda ingin mengubahnya).
+2. Download file `google-services.json`.
+3. Letakkan file `google-services.json` tersebut di dalam folder `android/app/`.
+
+### Untuk iOS
+1. Di Firebase Console, tambahkan aplikasi iOS dengan Bundle ID yang sesuai (default: `org.reactjs.native.example.KampusApp2` atau cek di Xcode).
+2. Download file `GoogleService-Info.plist`.
+3. Buka project `ios/KampusApp2.xcworkspace` menggunakan Xcode.
+4. Klik kanan pada folder `KampusApp2` di sidebar kiri, pilih "Add Files to 'KampusApp2'..." dan pilih file `GoogleService-Info.plist` yang sudah didownload. Pastikan "Copy items if needed" tercentang.
+
+## Menjalankan Aplikasi
 
 ### Android
-
-```sh
-# Using npm
+Pastikan emulator Android sudah berjalan atau device fisik terhubung.
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+### iOS (Hanya macOS)
+```bash
+cd ios
+pod install
+cd ..
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Lisensi
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+[MIT](LICENSE)
